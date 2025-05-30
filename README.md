@@ -14,7 +14,7 @@
 
 - 🔹 **Landing Page**
 
-  - Startup name and logo (placeholder)
+  - Startup name and logo 
   - Hero section with a bold tagline
   - Newsletter subscription form (Name & Email fields)
 
@@ -110,7 +110,7 @@ For questions or collaboration, feel free to reach out to:
 
 **Aman Kumar**  
 📧 aman.it360@gmail.com  
-🌐 [LinkedIn Profile or Portfolio link]
+🌐 aman-rajput.vercel.app
 
 ---
 
