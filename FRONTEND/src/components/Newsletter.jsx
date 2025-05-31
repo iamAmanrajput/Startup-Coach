@@ -2,16 +2,19 @@ import React, { useState } from "react";
 import { Send, CheckCircle } from "lucide-react";
 import { toast } from "react-hot-toast";
 import axios from "axios";
+import Loader from "./Loader";
 
 const Newsletter = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+    setLoading(true);
 
     if (!name.trim() || !email.trim()) {
       setError("Please fill out all fields.");
@@ -54,6 +57,8 @@ const Newsletter = () => {
           color: "#03a9f4",
         },
       });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -138,10 +143,16 @@ const Newsletter = () => {
 
                   <button
                     type="submit"
-                    className="w-full bg-[#03A9F4] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#0288D1] transition flex items-center justify-center"
+                    className="w-full bg-[#03A9F4] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#0288D1] transition flex items-center justify-center cursor-pointer"
                   >
-                    Join Now
-                    <Send size={18} className="ml-2" />
+                    {loading ? (
+                      <Loader />
+                    ) : (
+                      <>
+                        Join Now
+                        <Send size={18} className="ml-2 mt-1" />
+                      </>
+                    )}
                   </button>
 
                   <p className="text-xs text-gray-500 mt-3">
