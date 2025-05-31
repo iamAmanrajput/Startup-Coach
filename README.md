@@ -119,11 +119,6 @@ npm start
 
 ---
 
-## 🧠 Flow Diagram
-
-
-
----
 
 ## 🌐 Live Demo
 
