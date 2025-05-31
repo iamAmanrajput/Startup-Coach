@@ -159,7 +159,7 @@ const Newsletter = () => {
                   </h3>
                   <p className="text-[#333333] mb-6">
                     You're now part of India's fastest-growing startup
-                    community. Check your inbox for a welcome message.
+                    community.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
