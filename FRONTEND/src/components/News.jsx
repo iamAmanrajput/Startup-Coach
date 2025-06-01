@@ -1,40 +1,63 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Newspaper, ExternalLink } from "lucide-react";
-import axios from "axios";
-import toast from "react-hot-toast";
 
 const News = () => {
-  const [newsItem, setNewsItem] = useState([]);
+  const newsItems = [
+    {
+      id: 1,
+      date: "March 15, 2024",
+      title: "Indian Startup Ecosystem Shows Strong Growth in Q1 2024",
+      description:
+        "The Indian startup ecosystem has shown remarkable resilience and growth in the first quarter of 2024, with investments reaching new heights.",
+      url: "#",
+    },
+    {
+      id: 2,
+      date: "March 14, 2024",
+      title: "Government Announces New Startup India Seed Fund Scheme",
+      description:
+        "A new initiative worth ₹945 crore has been announced to provide financial assistance to startups for proof of concept, prototype development, and more.",
+      url: "#",
+    },
+    {
+      id: 3,
+      date: "March 13, 2024",
+      title: "Top 10 Indian Startups to Watch in 2024",
+      description:
+        "These emerging startups are revolutionizing various sectors with innovative solutions and strong growth potential.",
+      url: "#",
+    },
+  ];
 
-  useEffect(() => {
-    const getData = async () => {
-      const apiKey = import.meta.env.VITE_API_KEY;
-      const url = `https://newsapi.org/v2/everything?q=startup&pageSize=3&language=en&sortBy=publishedAt&apiKey=${apiKey}`;
-      try {
-        const response = await axios.get(url);
-        const articles = response.data.articles;
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const apiKey = import.meta.env.VITE_API_KEY;
+  //     const url = https://newsapi.org/v2/everything?q=startup&pageSize=3&language=en&sortBy=publishedAt&apiKey=${apiKey};
+  //     try {
+  //       const response = await axios.get(url);
+  //       const articles = response.data.articles;
 
-        const formattedArticles = articles.map((article, index) => ({
-          id: index + 1,
-          date: new Date(article.publishedAt).toLocaleDateString("en-IN", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          }),
-          title: article.title,
-          description: article.description || "No description available.",
-          url: article.url,
-        }));
+  //       const formattedArticles = articles.map((article, index) => ({
+  //         id: index + 1,
+  //         date: new Date(article.publishedAt).toLocaleDateString("en-IN", {
+  //           year: "numeric",
+  //           month: "long",
+  //           day: "numeric",
+  //         }),
+  //         title: article.title,
+  //         description: article.description || "No description available.",
+  //         url: article.url,
+  //       }));
 
-        setNewsItem(formattedArticles);
-      } catch (error) {
-        console.log(error?.response?.data?.message || "Internal Server Error");
-        toast.error(error?.response?.data?.message || "Internal Server Error");
-      }
-    };
+  //       setNewsItem(formattedArticles);
+  //     } catch (error) {
+  //       console.log(error?.response?.data?.message || "Internal Server Error");
+  //       toast.error(error?.response?.data?.message || "Internal Server Error");
+  //     }
+  //   };
 
-    getData();
-  }, []);
+  //   getData();
+  // }, []);
 
   return (
     <section id="news" className="py-16 md:py-24 bg-[#F5F7FF]">
@@ -56,7 +79,7 @@ const News = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {newsItem.map((item) => (
+          {newsItems.map((item) => (
             <div
               key={item.id}
               className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
@@ -75,8 +98,6 @@ const News = () => {
               <a
                 href={item.url}
                 className="inline-flex items-center text-custom-skyBlue hover:text-[#0288D1] font-medium transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 Read More
                 <ExternalLink size={16} className="ml-2" />
