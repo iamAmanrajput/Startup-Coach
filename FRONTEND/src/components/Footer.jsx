@@ -102,7 +102,8 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-[#141F60] text-center">
           <p className="text-gray-400 text-sm">
-            &copy; {currentYear} StartupCoaching.in. All rights reserved.
+            &copy; {currentYear} StartupCoaching.vercel.app. All rights
+            reserved.
           </p>
         </div>
       </div>

@@ -6,12 +6,12 @@ const Faq = () => {
 
   const faqs = [
     {
-      question: "What is StartupCoaching.in?",
+      question: "What is StartupCoaching.vercel.app?",
       answer:
         "StartupCoaching.in is India's first startup platform with an ecosystem approach, providing strategic guidance, fundraising support, and AI-driven insights to help startups grow from seed to Series A stages.",
     },
     {
-      question: "Which services does StartupCoaching.in offer?",
+      question: "Which services does StartupCoaching.vercel.app offer?",
       answer:
         "We offer fundraising assistance, product development support, marketing (organic & paid), financial and legal documentation, investor readiness training, and AI-powered business optimization.",
     },

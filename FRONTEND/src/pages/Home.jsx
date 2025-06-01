@@ -5,6 +5,7 @@ import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import Faq from "../components/Faq";
 import Navbar from "../components/Navbar";
+import News from "../components/News";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Navbar />
       <Hero />
       <About />
+      <News />
       <Newsletter />
       <Faq />
       <Footer />
