@@ -1,6 +1,6 @@
 # 🚀 Startup Coach
 
-**Startup Coach** is a full-stack web application built to help startup founders by offering essential support from day one. The platform features a clean landing page and a working newsletter subscription system, developed using the MERN stack with a robust MVC architecture and modern Tailwind CSS styling.
+**Startup Coach** is a full-stack web application built to help startup founders by offering essential support from day one. The platform features a sleek landing page and a working newsletter subscription system, developed using the MERN stack with a robust MVC architecture and modern Tailwind CSS styling.
 
 ---
 
@@ -14,18 +14,18 @@
 
 - 🔹 **Landing Page**
 
-  - Startup name and logo 
-  - Hero section with a bold tagline
-  - Newsletter subscription form (Name & Email fields)
+  - Professional startup name and logo
+  - Hero section with a compelling tagline
+  - Newsletter subscription form (Name & Email)
 
 - 🔹 **Newsletter Integration**
 
   - Fully functional form connected to the backend
-  - Submissions saved securely in MongoDB
+  - Submissions are saved securely in MongoDB
 
-- 🔹 **Clean Code Structure**
-  - Follows the MVC (Model-View-Controller) design pattern for scalable backend development
-  - Reusable components and organized folder structure
+- 🔹 **Clean Code Architecture**
+  - Follows the MVC (Model-View-Controller) pattern for scalable backend structure
+  - Reusable components and organized folder hierarchy
 
 ---
 
@@ -35,85 +35,108 @@
 | ------------ | --------------------------- |
 | Frontend     | React.js, Tailwind CSS      |
 | Backend      | Node.js, Express.js         |
-| Database     | MongoDB (with Mongoose)     |
+| Database     | MongoDB + Mongoose          |
 | Architecture | MVC (Model-View-Controller) |
 
 ---
 
-## 📁 Folder Structure (Simplified)
+## 🗂️ Project Structure (Simplified)
 
-    startup-coach/
-    ├── Frontend/ # React frontend
-    │   ├── public/
-    │   └── src/
-    │       ├── components/
-    │       ├── pages/
-    │       └── App.jsx
-    ├── Backend/ # Node.js backend
-    │   ├── controllers/
-    │   ├── models/
-    │   ├── routes/
-    │   ├── config/
-    │   └── index.js
-    ├── .env
-    ├── package.json
-    ├── README.md
+```
+startup-coach/
+├── Frontend/          # React Frontend
+│   ├── public/
+│   └── src/
+│       ├── components/
+│       ├── pages/
+│       └── App.jsx
+├── Backend/           # Node.js Backend
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── config/
+│   └── index.js
+├── .env
+├── package.json
+├── README.md
+```
 
 ---
 
 ## 🛠️ Installation & Setup
 
-> Make sure MongoDB is running locally or provide a cloud URI in `.env`.
+> ⚠️ **Make sure MongoDB is running locally or connected via a cloud URI like MongoDB Atlas.**
 
-    # Clone the repository
-    git clone https://github.com/iamamanrajput/startup-coach.git
-    cd startup-coach
+### 🔽 Clone the repository:
 
-    # Install backend dependencies
-    cd server
-    npm install
+```bash
+git clone https://github.com/iamamanrajput/startup-coach.git
+cd startup-coach
+```
 
-    # Install frontend dependencies
-    cd ../client
-    npm install
+### 📦 Install Backend Dependencies:
 
-    # Create .env file inside /server
-    touch ../server/.env
-    # Add your environment variables (example below)
+```bash
+cd Backend
+npm install
+```
 
-    # Run the backend
-    cd ../server
-    npm run dev
+### 💻 Install Frontend Dependencies:
 
-    # Run the frontend
-    cd ../client
-    npm start
+```bash
+cd ../Frontend
+npm install
+```
+
+### 🔐 Create `.env` in `/Backend`
+
+```bash
+touch ../Backend/.env
+```
+
+Add the following to `.env`:
+
+```env
+PORT=4000
+MONGO_URI=mongodb://localhost:27017/startup-coach
+```
+
+### ▶️ Run the App
+
+```bash
+# Run backend
+cd ../Backend
+npm run dev
+
+# Run frontend
+cd ../Frontend
+npm start
+```
 
 ---
 
-## 🔐 Example `.env` File
+## 🖼️ Screenshots
 
-    PORT=5000
-    MONGO_URI=mongodb://localhost:27017/startup-coach
+![image](https://github.com/user-attachments/assets/6f47cec4-f3e9-4ccb-b17d-3814c78d8da5)
 
 ---
 
-## 🌐 Live Demo (Optional)
+## 🌐 Live Demo
 
-Add your deployment link here if hosted.
+🔗 [Visit Live Site](https://startupcoaching.vercel.app)
 
 ---
 
 ## 📬 Contact
 
-For questions or collaboration, feel free to reach out to:
+For feedback, queries, or collaboration:
 
 **Aman Kumar**  
 📧 aman.it360@gmail.com  
-🌐 aman-rajput.vercel.app
+🌐 [Portfolio](https://aman-rajput.vercel.app)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE)
